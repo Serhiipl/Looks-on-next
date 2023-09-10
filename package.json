@@ -15,11 +15,30 @@
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
     "next": "13.4.19",
+    "photoswipe": "^5.4.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "5.2.2"
   },
   "devDependencies": {
     "sass": "^1.66.1"
-  }
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "next.config.js",
+  "author": "Sergio",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Serhiipl/Looks-on-next.git"
+  },
+  "keywords": [
+    "first",
+    "site",
+    "on",
+    "NEXT.JS"
+  ],
+  "bugs": {
+    "url": "https://github.com/Serhiipl/Looks-on-next/issues"
+  },
+  "homepage": "https://github.com/Serhiipl/Looks-on-next#readme"
 }

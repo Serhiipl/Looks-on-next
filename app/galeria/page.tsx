@@ -1,4 +1,5 @@
-export default function Galeria() {
-    return( <h1>OUR GALERY</h1>
-        )
+import GalleryEl from "./GalleryEl";
+
+export default function gallery() {
+  return <GalleryEl />;
 }

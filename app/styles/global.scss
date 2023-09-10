@@ -10,14 +10,12 @@ body {
   overflow-x: hidden;
 }
 
+// colours
+$light-rose: #f1dee8;
+$dark-rose: #391f41;
+
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
 
 a {
@@ -37,8 +35,10 @@ a {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 3.75rem;
-  background-color: #f1dee8;
+  height: 3.8rem;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  // box-shadow: ;
   padding: 0 2rem 0 1.5rem;
   .button-wrapper {
     padding: 0.8rem;
@@ -50,3 +50,6 @@ a {
 
 // Nawbar styles
 @import "./navbar";
+
+// Main styles
+@import "./main-section";

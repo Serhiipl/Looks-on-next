@@ -1,4 +1,4 @@
-import "./styles/main.scss";
+import "./styles/global.scss";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { TheHeader } from "@/components/TheHeader";
@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <TheHeader />
-        <main className="main"></main>
+
         {children}
         <TheFooter />
       </body>

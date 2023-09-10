@@ -7,9 +7,9 @@ const TheHeader = () => {
     <header className="header">
       <Link href="/" className="logo">
         <Image
-          src="/thelooks_icon.jpg"
-          width={160}
-          height={60}
+          src="/transparent.png"
+          width={150}
+          height={75}
           alt="theLooks Logo"
         />
       </Link>

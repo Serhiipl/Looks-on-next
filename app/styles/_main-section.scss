@@ -1,0 +1,25 @@
+.main-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+  .title-section {
+    min-height: 100vh;
+    background: url(/nature.jpg) center / cover no-repeat fixed;
+    padding: 10% 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    h1 {
+      text-align: center;
+      color: $light-rose;
+    }
+  }
+  .about {
+    padding: 1rem;
+  }
+}
