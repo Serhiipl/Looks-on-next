@@ -1,0 +1,51 @@
+.header {
+  // display: flex;
+  // justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 4.5rem;
+  background-color: rgba(102, 51, 153, 0.094);
+  backdrop-filter: blur(10px);
+  padding: 0 1.5rem;
+  @media (max-width: 53.75rem) {
+    padding: 0 2rem 0 0.5rem;
+  }
+  //
+  .button-wrapper {
+    padding: 0.8rem;
+    background-color: #391f41;
+    border-radius: 1.6rem;
+    color: #f1dee8;
+    transition: all 0.4s ease;
+    &:hover {
+      background-color: #472551;
+    }
+  }
+  .header-wrapper {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 75rem;
+  }
+  #hamburger-btn {
+    @media (max-width: 40rem) {
+      display: flex;
+    }
+    background-color: transparent;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    span {
+      width: 2rem;
+      height: 0.125rem;
+      background-color: $dark-rose;
+    }
+  }
+}
+// Nawbar styles
+@import "./navbar";

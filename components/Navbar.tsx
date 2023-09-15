@@ -1,13 +1,37 @@
 "use client ";
 import Link from "next/link";
 export default function Navbar() {
+  const navItems = [
+    {
+      title: "Glówna",
+      path: "#",
+    },
+    {
+      title: "O nas",
+      path: "#",
+    },
+    {
+      title: "Usługi",
+      path: "#",
+    },
+    {
+      title: "Galeria",
+      path: "/galeria",
+    },
+    {
+      title: "Kontakt",
+      path: "#",
+    },
+  ];
   return (
     <nav className="nav-menu">
-      <Link href="/">Glówna</Link>
-      <Link href="/">O nas</Link>
-      <Link href="/">Usługi</Link>
-      <Link href="/galeria">Galeria</Link>
-      <Link href="/">Kontakt</Link>
+      {navItems.map((item, i) => {
+        return (
+          <Link key={i} href={item.path}>
+            {item.title}
+          </Link>
+        );
+      })}
     </nav>
   );
 }

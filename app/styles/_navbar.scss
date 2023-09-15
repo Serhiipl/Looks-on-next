@@ -1,4 +1,7 @@
 .nav-menu {
+  @media (max-width: 40rem) {
+    display: none;
+  }
   min-width: 50dvw;
   display: flex;
   justify-content: space-around;
