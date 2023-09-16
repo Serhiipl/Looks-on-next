@@ -1,4 +1,4 @@
-"use client ";
+"use client";
 import Link from "next/link";
 export default function Navbar() {
   const navItems = [
@@ -23,11 +23,12 @@ export default function Navbar() {
       path: "#",
     },
   ];
+
   return (
-    <nav className="nav-menu">
+    <nav>
       {navItems.map((item, i) => {
         return (
-          <Link key={i} href={item.path}>
+          <Link className="nav-link" key={i} href={item.path}>
             {item.title}
           </Link>
         );

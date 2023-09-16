@@ -36,7 +36,7 @@
     span {
       width: 2rem;
       height: 0.125rem;
-      background-color: $dark-rose;
+      background-color: $light-rose;
     }
   }
 }
@@ -58,11 +58,45 @@
   .button-wrapper {
     position: absolute;
     top: 93dvh;
-    left: 70dvw;
+    left: 5dvw;
     padding: 0.5rem;
     font-size: 0.9rem;
   }
 }
-
+nav {
+  @media (max-width: 40rem) {
+    // display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 4.5rem;
+    padding: 2rem 0;
+    background-color: rgba(102, 51, 153, 0.15);
+    // filter: blur(10px);
+    width: 15rem;
+    height: 100dvh;
+    right: 0;
+    justify-content: flex-start;
+    // transform: scale(0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    .nav-link {
+      padding: 0 1rem 2rem 0;
+      display: block;
+      width: 100%;
+      text-align: end;
+    }
+  }
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: $light-rose;
+  flex: 1 1 auto;
+}
+.active {
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
 // Nawbar styles
-@import "./navbar";
+// @import "./navbar";
