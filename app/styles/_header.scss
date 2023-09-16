@@ -68,24 +68,26 @@ nav {
     // display: none;
     flex-direction: column;
     position: fixed;
+    gap: 2rem;
     top: 4.5rem;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
     background-color: rgba(102, 51, 153, 0.15);
     // filter: blur(10px);
     width: 15rem;
     height: 100dvh;
     right: 0;
     justify-content: flex-start;
+    align-items: end;
     // transform: scale(0.5);
     opacity: 0;
     visibility: hidden;
     transition: all 0.4s ease;
-    .nav-link {
-      padding: 0 1rem 2rem 0;
-      display: block;
-      width: 100%;
-      text-align: end;
-    }
+    // .nav-link {
+    //   padding: 0 1rem 2rem 0;
+    //   // display: block;
+    //   width: 100%;
+    //   text-align: end;
+    // }
   }
   display: flex;
   justify-content: space-around;
