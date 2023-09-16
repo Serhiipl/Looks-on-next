@@ -4,7 +4,7 @@ export default function Navbar() {
   const navItems = [
     {
       title: "Glówna",
-      path: "#",
+      path: "/",
     },
     {
       title: "O nas",

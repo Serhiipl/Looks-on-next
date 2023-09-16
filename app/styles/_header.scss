@@ -1,6 +1,4 @@
 .header {
-  // display: flex;
-  // justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0;
@@ -9,9 +7,7 @@
   background-color: rgba(102, 51, 153, 0.094);
   backdrop-filter: blur(10px);
   padding: 0 1.5rem;
-  @media (max-width: 53.75rem) {
-    padding: 0 2rem 0 0.5rem;
-  }
+
   //
   .button-wrapper {
     padding: 0.8rem;
@@ -31,9 +27,6 @@
     max-width: 75rem;
   }
   #hamburger-btn {
-    @media (max-width: 40rem) {
-      display: flex;
-    }
     background-color: transparent;
     display: none;
     flex-direction: column;
@@ -47,5 +40,29 @@
     }
   }
 }
+
+@media (max-width: 53.75rem) {
+  .header {
+    padding: 0 2rem 0 0.5rem;
+  }
+}
+
+@media (max-width: 40rem) {
+  .header {
+    #hamburger-btn {
+      display: flex;
+    }
+  }
+}
+@media (max-width: 28rem) {
+  .button-wrapper {
+    position: absolute;
+    top: 91dvh;
+    left: 68dvw;
+    padding: 0.3rem;
+    font-size: 0.7rem;
+  }
+}
+
 // Nawbar styles
 @import "./navbar";
