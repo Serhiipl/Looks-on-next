@@ -1,12 +1,17 @@
 "use client";
-// import Navbar from "./Navbar";
+import React, { useRef, useState } from "react";
+import useOutsideClick from "../app/customHooks/useOutsideClick";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
 import ReservationButton from "./ReservationButton";
 
-const TheHeader = () => {
-  const navItems = [
+interface NavItem {
+  title: string;
+  path: string;
+}
+
+const TheHeader: React.FC = () => {
+  const navItems: NavItem[] = [
     {
       title: "Glówna",
       path: "/",
@@ -29,10 +34,16 @@ const TheHeader = () => {
     },
   ];
   const [showNav, setShowNav] = useState(false);
+  const navRef = useRef<HTMLDivElement>(null);
+
+  useOutsideClick(navRef, () => {
+    setShowNav(false);
+  });
+
   function navChange() {
     setShowNav(!showNav);
-    console.log("first");
   }
+
   return (
     <header className="header">
       <div className="header-wrapper">
@@ -44,7 +55,7 @@ const TheHeader = () => {
             alt="theLooks Logo"
           />
         </Link>
-        <nav className={showNav ? "active" : ""}>
+        <nav ref={navRef} className={showNav ? "active" : ""}>
           {navItems.map((item, i) => {
             return (
               <Link
@@ -72,4 +83,5 @@ const TheHeader = () => {
     </header>
   );
 };
+
 export { TheHeader };

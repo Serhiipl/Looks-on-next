@@ -25,14 +25,16 @@ export default function Navbar() {
   ];
 
   return (
-    <nav>
-      {navItems.map((item, i) => {
-        return (
-          <Link className="nav-link" key={i} href={item.path}>
-            {item.title}
-          </Link>
-        );
-      })}
-    </nav>
+    <>
+      <nav>
+        {navItems.map((item, i) => {
+          return (
+            <Link className="nav-link" key={i} href={item.path}>
+              {item.title}
+            </Link>
+          );
+        })}
+      </nav>
+    </>
   );
 }
