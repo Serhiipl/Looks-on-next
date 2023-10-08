@@ -3,8 +3,8 @@ footer {
   flex-direction: column;
   align-items: center;
   padding: 1rem;
-  background-color: $light-rose;
-  color: rgb(225, 163, 163);
+  background-color: whitesmoke;
+  color: rgb(174, 174, 174);
   .footer-wrapper {
     max-width: 75rem;
     padding: 1rem;
@@ -14,7 +14,9 @@ footer {
     }
   }
   .line {
-    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
     height: 0.14rem;
     border-radius: 0.125rem;
     background-color: $dark-rose;

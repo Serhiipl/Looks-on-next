@@ -41,7 +41,6 @@ export default function SocialMediaLinks() {
 
   return (
     <>
-      <h3 className="social-title">Social media</h3>
       <ColoredLine />
       <div className="mediaLinksWrapper">
         {socialMedia.map((item, i) => {
