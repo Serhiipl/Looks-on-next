@@ -87,8 +87,14 @@ h6 {
   }
 }
 
+// Icon font
+@import "./icon-font";
+
 // Header styles
 @import "./header";
 
 // Main styles
 @import "./main-section";
+
+// Footer styles
+@import "./footer";

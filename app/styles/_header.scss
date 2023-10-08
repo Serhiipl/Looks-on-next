@@ -74,6 +74,9 @@
     left: 5dvw;
     padding: 0.5rem;
     font-size: 0.9rem;
+    &:active {
+      transform: scale(0.8);
+    }
   }
 }
 nav {
@@ -91,16 +94,17 @@ nav {
     right: 0;
     justify-content: flex-start;
     align-items: end;
-    // transform: scale(0.5);
+    transform: translateX(20rem) translateY(-5%);
     opacity: 0;
     visibility: hidden;
     transition: all 0.4s ease;
-    // .nav-link {
-    //   padding: 0 1rem 2rem 0;
-    //   // display: block;
-    //   width: 100%;
-    //   text-align: end;
-    // }
+    .nav-link {
+      padding: 0 1rem 2rem 0;
+      // display: block;
+      width: 100%;
+      text-align: end;
+      font-size: large;
+    }
   }
   display: flex;
   justify-content: space-around;

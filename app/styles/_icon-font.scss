@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?8v4i84");
+  src: url("../fonts/icomoon.eot?8v4i84#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon.ttf?8v4i84") format("truetype"),
+    url("../fonts/icomoon.woff?8v4i84") format("woff"),
+    url("../fonts/icomoon.svg?8v4i84#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  // speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-iphone:before {
+  content: "\e916";
+}
+.icon-phone1:before {
+  content: "\e910";
+}
+.icon-clock1:before {
+  content: "\e902";
+}
+.icon-phone2:before {
+  content: "\e911";
+}
+.icon-call:before {
+  content: "\e915";
+}
+.icon-alternate_email:before {
+  content: "\e904";
+}
+.icon-phone:before {
+  content: "\e90f";
+}
+.icon-facebook-ico:before {
+  content: "\e906";
+}
+.icon-instagram-ico:before {
+  content: "\e907";
+}
+.icon-booksy-ico:before {
+  content: "\e905";
+}
+.icon-facebook-ico:before {
+  content: "\e906";
+}
+.icon-instagram-ico:before {
+  content: "\e907";
+}
+.icon-marker-ico:before {
+  content: "\e908";
+}
+.icon-facebook-square:before {
+  content: "\e909";
+}
+.icon-instagram1:before {
+  content: "\e90a";
+}
+.icon-instagram:before {
+  content: "\e90b";
+}
+.icon-alternate_email1:before {
+  content: "\e90c";
+}
+.icon-email:before {
+  content: "\e90d";
+}
+.icon-mail:before {
+  content: "\e90d";
+}
+.icon-markunread:before {
+  content: "\e90d";
+}
+.icon-local_post_office:before {
+  content: "\e90d";
+}
+.icon-location:before {
+  content: "\e90e";
+}
+.icon-map-marker1:before {
+  content: "\e90e";
+}
+.icon-marker:before {
+  content: "\e90e";
+}
+.icon-pin:before {
+  content: "\e90e";
+}
+.icon-phone-square:before {
+  content: "\e912";
+}
+.icon-mobile:before {
+  content: "\e913";
+}
+.icon-phone3:before {
+  content: "\e914";
+}
+.icon-facebook:before {
+  content: "\e900";
+}
+.icon-time:before {
+  content: "\e901";
+}
+.icon-clock1:before {
+  content: "\e902";
+}
+.icon-map-marker:before {
+  content: "\e903";
+}

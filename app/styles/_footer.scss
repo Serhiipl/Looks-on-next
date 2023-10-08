@@ -1,0 +1,74 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: $light-rose;
+  color: rgb(225, 163, 163);
+  .footer-wrapper {
+    max-width: 75rem;
+    padding: 1rem;
+    .footer-title,
+    .social-title {
+      text-align: center;
+    }
+  }
+  .line {
+    width: 100%;
+    height: 0.14rem;
+    border-radius: 0.125rem;
+    background-color: $dark-rose;
+  }
+
+  .icon-map-marker1 {
+    color: $dark-rose;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+  }
+  .icon-phone1 {
+    color: $dark-rose;
+    font-size: 0.9rem;
+    margin-right: 1.1rem;
+  }
+  .icon-mail {
+    color: $dark-rose;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+  }
+  .mediaLinksWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .icon-instagram {
+    color: $dark-rose;
+    font-size: 2.8rem;
+    margin: 1rem;
+  }
+  .icon-facebook-ico {
+    color: $dark-rose;
+    font-size: 3rem;
+    margin: 1rem;
+  }
+  .icon-booksy-ico {
+    color: $dark-rose;
+    font-size: 3rem;
+    margin: 1rem;
+  }
+  .address-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1rem 0 1rem 0;
+  }
+  .callTo-wrapper,
+  .maillTo-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1rem;
+    .callTo {
+      display: block;
+    }
+  }
+}
