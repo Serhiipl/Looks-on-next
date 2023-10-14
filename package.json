@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@flaticon/flaticon-uicons": "^2.4.0",
     "@types/node": "20.5.9",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
@@ -20,7 +19,6 @@
     "photoswipe": "^5.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-grid-gallery": "^1.0.0",
     "react-icons": "^4.11.0",
     "typescript": "5.2.2"
   },
