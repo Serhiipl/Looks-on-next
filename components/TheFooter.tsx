@@ -6,7 +6,7 @@ const TheFooter = () => {
     <footer className="footer">
       <div className="footer-wrapper">
         <div className="contacts-wrapper">
-          <h2 className="footer-title">footer</h2>
+          <h2 className="footer-title">Kontakt</h2>
           <Address />
           <SocialMedia />
         </div>
