@@ -27,7 +27,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/galeria/SimpleGallery.js"
+    "app/galeria/SimpleGallery.js",
+    "app/data/formCheck.js"
   ],
   "exclude": ["node_modules"]
 }
