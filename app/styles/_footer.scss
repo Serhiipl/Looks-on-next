@@ -25,6 +25,7 @@ footer {
   .form-item > textarea {
     border: 0.0625rem solid $dark-rose;
     border-radius: 0.4rem;
+    background-color: whitesmoke;
     padding: 4.8px;
   }
   .form-item > input[type="checkbox"] {
@@ -42,6 +43,9 @@ footer {
     flex-direction: row;
     max-width: 75rem;
     padding: 1rem;
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+    }
     .footer-title,
     .social-title {
       text-align: center;

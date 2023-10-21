@@ -81,12 +81,6 @@ h6 {
   font-weight: inherit;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
-
 // Icon font
 @import "./icon-font";
 
@@ -98,3 +92,9 @@ h6 {
 
 // Footer styles
 @import "./footer";
+
+@media (prefers-color-scheme: dark) {
+  html {
+    // color-scheme: dark;
+  }
+}

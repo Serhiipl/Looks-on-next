@@ -72,16 +72,16 @@ export default function ContactForm() {
       console.log("Email NOT OK");
     }
 
-    if (!email && !tel) {
-      // Якщо обидва поля formEmail і formTel порожні, вивести помилку
-      alert("Należy wypełnić co najmniej jedno z pól „E-mail” lub „Telefon”.");
-      return;
-    }
-    if (!name || !message) {
-      // Якщо поля formName або formMessage порожні, вивести помилку
-      alert("Pola „Imie” i „Wiadomość” są obowiązkowe");
-      return;
-    }
+    // if (!email && !tel) {
+    //   // Якщо обидва поля formEmail і formTel порожні, вивести помилку
+    //   alert("Należy wypełnić co najmniej jedno z pól „E-mail” lub „Telefon”.");
+    //   return;
+    // }
+    // if (!name || !message) {
+    //   // Якщо поля formName або formMessage порожні, вивести помилку
+    //   alert("Pola „Imie” i „Wiadomość” są obowiązkowe");
+    //   return;
+    // }
 
     // let emailValid = true;
     // let telValid = true;
