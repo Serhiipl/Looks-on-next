@@ -1,6 +1,7 @@
 "use client";
 
 import React, { FormEvent, useState } from "react";
+import emailjs from "@emailjs/browser";
 import { ColoredLine } from "./SocialMedia";
 
 export default function ContactForm() {
@@ -22,13 +23,6 @@ export default function ContactForm() {
     setformMessage("");
   }
 
-  //   function emailTest() {
-  //     return !/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,8})+$/.test(formEmail);
-  //   }
-
-  //   function telTest() {
-  //     return !/^[\d+][\d() -]{6,14}\d$/.test(formTel);
-  //   }
   function isValidForm() {
     const isNameValid = formName.trim() !== "";
     const isMessageValid = formMessage.trim() !== "";
@@ -50,10 +44,6 @@ export default function ContactForm() {
   function handleSubmit(e: FormEvent) {
     // Prevent the browser from reloading the page
     e.preventDefault();
-
-    // Оголошуємо змінні для валідації телефону і електронної пошти
-    let telValid = true;
-    let emailValid = true;
 
     // Clear previous errors
     setNameError(false);
@@ -129,18 +119,38 @@ export default function ContactForm() {
       setEmailError(true);
     }
 
+    const form = e.target as HTMLFormElement;
     if (isValidForm()) {
+      // Додайте перевірку, чи form дійсно є HTMLFormElement
+      if (form instanceof HTMLFormElement) {
+        emailjs
+          .sendForm(
+            "service_g1n511f",
+            "template_m9senrp",
+            form,
+
+            "bQojWtV3rQeW7m3EL"
+          )
+          .then(
+            (result) => {
+              console.log(result.text);
+            },
+            (error) => {
+              console.log(error.text);
+            }
+          );
+      }
       // Read the form data
-      const form = e.target as HTMLFormElement;
-      const formData = new FormData(form);
+      //   const form = e.target as HTMLFormElement;
+      //   const formData = new FormData(form);
       //   console.log(form.formName.value);
 
       // You can pass formData as a fetch body directly:
-      fetch("/some-api", { method: form.method, body: formData });
+      //   fetch("/some-api", { method: form.method, body: formData });
 
       // Or you can work with it as a plain object:
-      const formJson = Object.fromEntries(formData.entries());
-      console.log(formJson);
+      //   const formJson = Object.fromEntries(formData.entries());
+      //   console.log(formJson);
     } else {
       console.log("Форма не є валідною. Будь ласка, перевірте поля.");
     }
@@ -149,7 +159,10 @@ export default function ContactForm() {
     <div className="form-wrapper">
       <h2 className="form-title">Napisz nam</h2>
       <ColoredLine />
-      <form onSubmit={handleSubmit} method="post">
+      <form
+        onSubmit={handleSubmit}
+        //   method="post"
+      >
         <div className="form-item">
           <label htmlFor="formName"></label>
           <input
@@ -220,7 +233,7 @@ export default function ContactForm() {
             defaultChecked={true}
           />
           <label htmlFor="formConsent">Zgoda</label>
-          <button className="submit-btn" type="submit">
+          <button className="submit-btn" type="submit" value="Send">
             Wyslij
           </button>
         </div>
