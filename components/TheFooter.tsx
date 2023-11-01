@@ -1,6 +1,6 @@
-import Address from "./Address";
-import ContactForm from "./ContactForm";
-import SocialMedia from "./SocialMedia";
+import Address from "@/components/Address";
+import ContactForm from "@/components/ContactForm";
+import SocialMedia from "@/components/SocialMedia";
 
 const TheFooter = () => {
   return (

@@ -2,7 +2,9 @@
 
 import React, { FormEvent, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { ColoredLine } from "./SocialMedia";
+import { ColoredLine } from "@/components/SocialMedia";
+// import FormTooltip from "@/components/FormToolTip";
+import { Tooltip } from "react-tooltip";
 
 export default function ContactForm() {
   // Declare a state variables...
@@ -13,7 +15,10 @@ export default function ContactForm() {
   const [nameError, setNameError] = useState(false);
   const [emailError, setEmailError] = useState(false);
   const [telError, setTelError] = useState(false);
+  const [isConsentChecked, setIsConsentChecked] = useState(false);
   const [messageError, setMessageError] = useState(false);
+  const [isOpenName, setIsOpenName] = useState(false);
+  const [isOpenTel, setIsOpenTel] = useState(false);
 
   //  Clear form fields...
   function clearFormFields() {
@@ -54,6 +59,10 @@ export default function ContactForm() {
     // Performing field validation
     if (!name) {
       setNameError(true);
+      setIsOpenName(true);
+      setTimeout(() => {
+        setIsOpenName(false);
+      }, 6000);
     }
 
     if (!message) {
@@ -64,46 +73,30 @@ export default function ContactForm() {
       setTelError(true);
     }
 
-    if (!name || !message) {
-      // Якщо поля formName або formMessage порожні, вивести помилку
-      //   alert('Поля "Imie" та "Wiadomość" є обовʼязковими');
-      return;
-    }
+    // if (!name || !message) {
+    //   // Якщо поля formName або formMessage порожні, вивести помилку
+    //   // alert('Поля "Imie" та "Wiadomość" є обовʼязковими');
+
+    //   return;
+    // }
     if (!email && !tel) {
       // Якщо обидва поля formEmail і formTel порожні, вивести помилку
-
-      alert('Потрібно заповнити хоча б одне з полів "Email" або "Telefon"');
+      // alert('Потрібно заповнити хоча б одне з полів "Email" або "Telefon"');
+      setIsOpenTel(true);
+      setTimeout(() => {
+        setIsOpenTel(false);
+      }, 6000);
       return;
     }
-
-    // if (/^[\d()+ -]{6,14}$/.test(formTel) && formEmail === "") {
-    //   console.log("Telefon OK");
-    //   telValid = true;
-    //   setTelError(false);
-    // } else if (/^[\d()+ -]{6,14}$/.test(formTel) && formEmail !== "") {
-    //   console.log("Telefon NOT OK");
-    //   telValid = false;
-    //   setTelError(true);
-    // }
-
-    // if (
-    //   /^[\w+.-]+@\w+([.-]?\w+)*(\.\w{2,8})+$/.test(formEmail) &&
-    //   formTel === ""
-    // ) {
-    //   console.log("Email OK");
-    //   emailValid = true;
-    //   setEmailError(false);
-    // } else if (
-    //   /^[\w+.-]+@\w+([.-]?\w+)*(\.\w{2,8})+$/.test(formEmail) &&
-    //   formTel !== ""
-    // ) {
-    //   console.log("Email NOT OK");
-    //   emailValid = false;
-    //   setEmailError(true);
-    // }
+    if (!isConsentChecked) {
+      alert("Для відправки форми необхідна ваша згода");
+      setIsConsentChecked(false);
+      return;
+    }
 
     if (/^[\d()+ -]{6,14}$/.test(formTel) || formEmail !== "") {
       console.log("Telefon OK");
+      setTelError(false);
     } else {
       console.log("Telefon NOT OK");
       setTelError(true);
@@ -114,6 +107,7 @@ export default function ContactForm() {
       formTel !== ""
     ) {
       console.log("Email OK");
+      setEmailError(false);
     } else {
       console.log("Email NOT OK");
       setEmailError(true);
@@ -140,17 +134,6 @@ export default function ContactForm() {
             }
           );
       }
-      // Read the form data
-      //   const form = e.target as HTMLFormElement;
-      //   const formData = new FormData(form);
-      //   console.log(form.formName.value);
-
-      // You can pass formData as a fetch body directly:
-      //   fetch("/some-api", { method: form.method, body: formData });
-
-      // Or you can work with it as a plain object:
-      //   const formJson = Object.fromEntries(formData.entries());
-      //   console.log(formJson);
     } else {
       console.log("Форма не є валідною. Будь ласка, перевірте поля.");
     }
@@ -166,17 +149,26 @@ export default function ContactForm() {
         <div className="form-item">
           <label htmlFor="formName"></label>
           <input
+            data-tooltip-id="my-tooltip"
+            data-tooltip-content="Pola Imie i Wiadomość są obowiązkowe"
+            data-tooltip-place="top-start"
             className={"form-input " + (nameError ? "error" : "")}
             value={formName}
             onChange={(e) => {
               setformName(e.target.value);
               setNameError(false);
+              setIsOpenName(false);
             }}
             type="text"
             name="formName"
             autoComplete="on"
             id="formName"
-            placeholder="Imie"
+            placeholder="Imie (obowiązkowe)"
+          />
+          <Tooltip
+            id="my-tooltip"
+            isOpen={isOpenName}
+            className="tooltip-for-name"
           />
         </div>
         <div className="form-item">
@@ -186,6 +178,8 @@ export default function ContactForm() {
             value={formEmail}
             onChange={(e) => {
               setformEmail(e.target.value);
+              setEmailError(false);
+              setIsOpenTel(false);
             }}
             type="email"
             name="formEmail"
@@ -197,17 +191,26 @@ export default function ContactForm() {
         <div className="form-item">
           <label htmlFor="formTel"></label>
           <input
+            data-tooltip-id="tel-tooltip"
+            data-tooltip-content="Wypelnij pole Telefon lub Email"
+            data-tooltip-place="bottom"
             className={"form-input " + (telError ? "error" : "")}
             value={formTel}
             onChange={(e) => {
               setformTel(e.target.value);
               setTelError(false);
+              setIsOpenTel(false);
             }}
             type="tel"
             name="formTel"
             autoComplete="on"
             id="formTel"
             placeholder="Telefon"
+          />
+          <Tooltip
+            id="tel-tooltip"
+            isOpen={isOpenTel}
+            className="tooltip-for-tel"
           />
         </div>
         <div className="form-item">
@@ -223,14 +226,18 @@ export default function ContactForm() {
             id="formMessage"
             cols={40}
             rows={4}
+            placeholder="Wiadomość (obowiązkowe)"
           />
         </div>
         <div className="form-item">
           <input
+            className={"form-checkbox " + (isConsentChecked ? "" : "error")}
             type="checkbox"
             name="formConsent"
             id="formConsent"
-            defaultChecked={true}
+            // defaultChecked={true}
+            checked={isConsentChecked}
+            onChange={(e) => setIsConsentChecked(e.target.checked)}
           />
           <label htmlFor="formConsent">Zgoda</label>
           <button className="submit-btn" type="submit" value="Send">

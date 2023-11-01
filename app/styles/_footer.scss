@@ -15,6 +15,70 @@ footer {
   }
   .form-item {
     padding: 0.5rem 1rem;
+    .tooltip-for-name {
+      border-radius: 0.5rem;
+      background-color: $light-rose;
+      color: $dark-rose;
+      -webkit-animation: fadeinout 6s ease-in-out;
+      animation: fadeinout 6s ease-in-out;
+      opacity: 0;
+
+      @-webkit-keyframes fadeinout {
+        0% {
+          opacity: 0.8;
+        }
+        30% {
+          opacity: 1;
+        }
+        0% {
+          opacity: 0.8;
+        }
+      }
+
+      @keyframes fadeinout {
+        10% {
+          opacity: 0.8;
+        }
+        50% {
+          opacity: 1;
+        }
+        10% {
+          opacity: 0.8;
+        }
+      }
+    }
+    .tooltip-for-tel {
+      border-radius: 0.5rem;
+      background-color: $light-rose;
+      color: $dark-rose;
+      -webkit-animation: fadeinout 6s ease-in-out;
+      animation: fadeinout 6s ease-in-out;
+      opacity: 0;
+
+      @-webkit-keyframes fadeinout {
+        0% {
+          opacity: 0.8;
+        }
+        30% {
+          opacity: 1;
+        }
+        0% {
+          opacity: 0.8;
+        }
+      }
+
+      @keyframes fadeinout {
+        10% {
+          opacity: 0.8;
+        }
+        50% {
+          opacity: 1;
+        }
+        10% {
+          opacity: 0.8;
+        }
+      }
+    }
   }
   .form-item > input {
     border-bottom: 0.0625rem solid $dark-rose;
@@ -34,8 +98,13 @@ footer {
       border: 1px solid red; /* Змініть стиль границі, щоб виділити поле червоним коліром */
     }
   }
-  .form-item > input[type="checkbox"] {
+
+  .form-item > .form-checkbox {
     width: 1rem;
+    &.error {
+      -webkit-box-shadow: 0 0 0.625rem rgb(255, 0, 0);
+      box-shadow: 0 0 0.625rem rgb(255, 0, 0);
+    }
   }
   .submit-btn {
     width: 4rem;
