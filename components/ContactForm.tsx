@@ -128,6 +128,7 @@ export default function ContactForm() {
           .then(
             (result) => {
               console.log(result.text);
+              clearFormFields();
             },
             (error) => {
               console.log(error.text);

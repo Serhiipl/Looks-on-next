@@ -51,31 +51,70 @@ footer {
       border-radius: 0.5rem;
       background-color: $light-rose;
       color: $dark-rose;
-      -webkit-animation: fadeinout 6s ease-in-out;
-      animation: fadeinout 6s ease-in-out;
+      -webkit-animation: fadein 3s ease-in-out, fadeout 3s ease-in-out;
+      animation: fadein 3s ease-in, fadeout 6s ease-out;
+      // animation: fadeinout 6s ease-in-out;
       opacity: 0;
 
-      @-webkit-keyframes fadeinout {
-        0% {
-          opacity: 0.8;
-        }
-        30% {
+      // @-webkit-keyframes fadeinout {
+      //   0% {
+      //     opacity: 0.8;
+      //   }
+      //   30% {
+      //     opacity: 1;
+      //   }
+      //   0% {
+      //     opacity: 0.8;
+      //   }
+      // }
+
+      // @keyframes fadeinout {
+      //   10% {
+      //     opacity: 0.8;
+      //   }
+      //   50% {
+      //     opacity: 1;
+      //   }
+      //   10% {
+      //     opacity: 0.8;
+      //   }
+      // }
+      @-webkit-keyframes fadein {
+        100% {
           opacity: 1;
-        }
-        0% {
-          opacity: 0.8;
         }
       }
-
-      @keyframes fadeinout {
-        10% {
-          opacity: 0.8;
-        }
-        50% {
+      @-webkit-keyframes fadeout {
+        0% {
           opacity: 1;
         }
-        10% {
+        60% {
+          opacity: 1;
+        }
+        80% {
           opacity: 0.8;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      @keyframes fadein {
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes fadeout {
+        0% {
+          opacity: 1;
+        }
+        60% {
+          opacity: 1;
+        }
+        80% {
+          opacity: 0.8;
+        }
+        100% {
+          opacity: 0;
         }
       }
     }
