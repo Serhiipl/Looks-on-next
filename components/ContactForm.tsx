@@ -3,8 +3,8 @@
 import React, { FormEvent, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { ColoredLine } from "@/components/SocialMedia";
-// import FormTooltip from "@/components/FormToolTip";
 import { Tooltip } from "react-tooltip";
+import { kaushanRegular } from "../app/fonts";
 
 export default function ContactForm() {
   // Declare a state variables...
@@ -141,7 +141,7 @@ export default function ContactForm() {
   }
   return (
     <div className="form-wrapper">
-      <h2 className="form-title">Napisz nam</h2>
+      <h2 className={`${kaushanRegular.className} form-title`}>Napisz nam</h2>
       <ColoredLine />
       <form
         onSubmit={handleSubmit}

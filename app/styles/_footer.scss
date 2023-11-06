@@ -7,78 +7,70 @@ footer {
   color: rgb(174, 174, 174);
   .form-wrapper {
     display: flex;
+    max-width: 28.125rem;
     flex-direction: column;
     padding: 0 1rem;
-    .form-title {
-      text-align: center;
-    }
   }
+  // .contacts-wrapper {
+  // }
   .form-item {
     padding: 0.5rem 1rem;
     .tooltip-for-name {
-      border-radius: 0.5rem;
-      background-color: $light-rose;
-      color: $dark-rose;
-      -webkit-animation: fadeinout 6s ease-in-out;
-      animation: fadeinout 6s ease-in-out;
-      opacity: 0;
-
-      @-webkit-keyframes fadeinout {
-        0% {
-          opacity: 0.8;
-        }
-        30% {
-          opacity: 1;
-        }
-        0% {
-          opacity: 0.8;
-        }
-      }
-
-      @keyframes fadeinout {
-        10% {
-          opacity: 0.8;
-        }
-        50% {
-          opacity: 1;
-        }
-        10% {
-          opacity: 0.8;
-        }
-      }
-    }
-    .tooltip-for-tel {
+      font-size: x-small;
       border-radius: 0.5rem;
       background-color: $light-rose;
       color: $dark-rose;
       -webkit-animation: fadein 3s ease-in-out, fadeout 3s ease-in-out;
       animation: fadein 3s ease-in, fadeout 6s ease-out;
-      // animation: fadeinout 6s ease-in-out;
-      opacity: 0;
+      // opacity: 0;
+      @-webkit-keyframes fadein {
+        100% {
+          opacity: 1;
+        }
+      }
+      @-webkit-keyframes fadeout {
+        0% {
+          opacity: 1;
+        }
+        60% {
+          opacity: 1;
+        }
+        80% {
+          opacity: 0.8;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      @keyframes fadein {
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes fadeout {
+        0% {
+          opacity: 1;
+        }
+        60% {
+          opacity: 1;
+        }
+        80% {
+          opacity: 0.8;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+    .tooltip-for-tel {
+      font-size: x-small;
+      border-radius: 0.5rem;
+      background-color: $light-rose;
+      color: $dark-rose;
+      -webkit-animation: fadein 3s ease-in-out, fadeout 3s ease-in-out;
+      animation: fadein 3s ease-in, fadeout 6s ease-out;
+      // opacity: 0;
 
-      // @-webkit-keyframes fadeinout {
-      //   0% {
-      //     opacity: 0.8;
-      //   }
-      //   30% {
-      //     opacity: 1;
-      //   }
-      //   0% {
-      //     opacity: 0.8;
-      //   }
-      // }
-
-      // @keyframes fadeinout {
-      //   10% {
-      //     opacity: 0.8;
-      //   }
-      //   50% {
-      //     opacity: 1;
-      //   }
-      //   10% {
-      //     opacity: 0.8;
-      //   }
-      // }
       @-webkit-keyframes fadein {
         100% {
           opacity: 1;
@@ -141,11 +133,14 @@ footer {
   .form-item > .form-checkbox {
     width: 1rem;
     &.error {
-      -webkit-box-shadow: 0 0 0.625rem rgb(255, 0, 0);
-      box-shadow: 0 0 0.625rem rgb(255, 0, 0);
+      -webkit-box-shadow: 0 0 0.3rem rgb(255, 0, 0);
+      box-shadow: 0 0 0.3rem rgb(255, 0, 0);
     }
   }
   .submit-btn {
+    position: relative;
+    left: 55%;
+    color: $light-rose;
     width: 4rem;
     height: 2.3rem;
     background-color: $dark-rose;
@@ -160,18 +155,22 @@ footer {
     @media screen and (max-width: 480px) {
       flex-direction: column;
     }
-    .footer-title,
-    .social-title {
-      text-align: center;
+    .contacts-title,
+    .form-title {
+      text-align: left;
+      font-size: 2rem;
+      color: $dark-rose;
+      margin-bottom: 1rem;
     }
   }
   .line {
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    height: 0.14rem;
-    border-radius: 0.125rem;
-    background-color: $dark-rose;
+    // margin-left: auto;
+    // margin-right: auto;
+    margin-bottom: 1rem;
+    width: 10rem;
+    height: 0.4rem;
+    // border-radius: 0.125rem;
+    background-color: rgb(120, 45, 120);
   }
 
   .icon-map-marker1 {
@@ -228,4 +227,14 @@ footer {
   .error {
     border-bottom: 2px solid red; /* Змініть стиль границі, щоб виділити поле червоним коліром */
   }
+}
+.rights-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100 vw;
+  height: 3rem;
+  background-color: $dark-rose;
+  color: $light-rose;
+  font-size: small;
 }
