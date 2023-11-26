@@ -4,7 +4,7 @@ import React, { FormEvent, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { ColoredLine } from "@/components/SocialMedia";
 import { Tooltip } from "react-tooltip";
-import { kaushanRegular } from "../app/fonts";
+import { marcellusRegular } from "../app/fonts";
 
 export default function ContactForm() {
   // Declare a state variables...
@@ -140,20 +140,20 @@ export default function ContactForm() {
     }
   }
   return (
-    <div className="form-wrapper">
-      <h2 className={`${kaushanRegular.className} form-title`}>Napisz nam</h2>
+    <div className={`${marcellusRegular.variable} form-wrapper`}>
+      <h2 className={`${marcellusRegular.className} form-title`}>Napisz nam</h2>
       <ColoredLine />
       <form
         onSubmit={handleSubmit}
         //   method="post"
       >
-        <div className="form-item">
+        <div className="form-item item-name">
           <label htmlFor="formName"></label>
           <input
             data-tooltip-id="my-tooltip"
             data-tooltip-content="Pola Imie i Wiadomość są obowiązkowe"
             data-tooltip-place="top-start"
-            className={"form-input " + (nameError ? "error" : "")}
+            className={"form-input" + (nameError ? "error" : "")}
             value={formName}
             onChange={(e) => {
               setformName(e.target.value);
@@ -164,7 +164,7 @@ export default function ContactForm() {
             name="formName"
             autoComplete="on"
             id="formName"
-            placeholder="Imie (obowiązkowe)"
+            placeholder="Imię (pole obowiązkowe)"
           />
           <Tooltip
             id="my-tooltip"

@@ -1,16 +1,17 @@
 import Address from "@/components/Address";
 import ContactForm from "@/components/ContactForm";
 import SocialMedia from "@/components/SocialMedia";
-import { kaushanRegular } from "../app/fonts";
+import { marcellusRegular } from "../app/fonts";
+import { poiretOneRegular } from "../app/fonts";
 
-const TheFooter = () => {
+export default function TheFooter() {
   return (
     <>
-      <footer className="footer">
+      <footer className={`${marcellusRegular.variable}  footer`}>
         <div className="footer-wrapper">
           <ContactForm />
           <div className="contacts-wrapper">
-            <h2 className={`${kaushanRegular.className} form-title`}>
+            <h2 className={`${marcellusRegular.className} form-title`}>
               Kontakt
             </h2>
             <Address />
@@ -18,11 +19,9 @@ const TheFooter = () => {
           </div>
         </div>
       </footer>
-      <div className="rights-wrapper">
+      <div className={`${poiretOneRegular.className} rights-wrapper`}>
         <p className="rights">©2023 badzega corp. All rights Reserved.=)</p>
       </div>
     </>
   );
-};
-
-export { TheFooter };
+}

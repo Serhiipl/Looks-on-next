@@ -111,11 +111,22 @@ footer {
       }
     }
   }
+  .form-item.item-name {
+    position: relative;
+    &::before {
+      content: url("../../public/icons/icon-user.svg");
+      position: absolute;
+      top: 7px;
+      left: -3px;
+    }
+  }
   .form-item > input {
     border-bottom: 0.0625rem solid $dark-rose;
     width: 100%;
     height: 1.2rem;
     background-color: whitesmoke;
+    font-family: var(--font-marcellusRegular);
+    font-weight: 400;
     &.error {
       border-bottom: 1px solid red; /* Змініть стиль границі, щоб виділити поле червоним коліром */
     }
@@ -125,6 +136,8 @@ footer {
     border-radius: 0.4rem;
     background-color: whitesmoke;
     padding: 4.8px;
+    font-family: var(--font-marcellusRegular);
+    font-weight: 400;
     &.error {
       border: 1px solid red; /* Змініть стиль границі, щоб виділити поле червоним коліром */
     }
@@ -132,6 +145,8 @@ footer {
 
   .form-item > .form-checkbox {
     width: 1rem;
+    font-family: var(--font-marcellusRegular);
+    font-weight: 400;
     &.error {
       -webkit-box-shadow: 0 0 0.3rem rgb(255, 0, 0);
       box-shadow: 0 0 0.3rem rgb(255, 0, 0);
@@ -167,8 +182,8 @@ footer {
     // margin-left: auto;
     // margin-right: auto;
     margin-bottom: 1rem;
-    width: 10rem;
-    height: 0.4rem;
+    width: 100%;
+    height: 0.06rem;
     // border-radius: 0.125rem;
     background-color: rgb(120, 45, 120);
   }
@@ -213,6 +228,8 @@ footer {
     flex-direction: row;
     align-items: center;
     margin: 1rem 0 1rem 0;
+    font-family: var(--font-marcellusRegular);
+    font-weight: 400;
   }
   .callTo-wrapper,
   .maillTo-wrapper {
@@ -220,6 +237,8 @@ footer {
     flex-direction: row;
     align-items: center;
     margin-bottom: 1rem;
+    font-family: var(--font-marcellusRegular);
+    font-weight: 400;
     .callTo {
       display: block;
     }
@@ -234,7 +253,7 @@ footer {
   justify-content: center;
   width: 100 vw;
   height: 3rem;
-  background-color: $dark-rose;
+  background-color: rebeccapurple;
   color: $light-rose;
   font-size: small;
 }

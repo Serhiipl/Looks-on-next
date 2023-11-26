@@ -22,7 +22,7 @@ const TheHeader: React.FC = () => {
     },
     {
       title: "Usługi",
-      path: "#",
+      path: "/uslugi",
     },
     {
       title: "Galeria",
