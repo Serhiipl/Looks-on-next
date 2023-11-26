@@ -109,7 +109,8 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: $light-rose;
+  color: $dark-rose;
+  text-shadow: $light-rose;
   flex: 1 1 auto;
 }
 .active {
